@@ -11,6 +11,8 @@ public var maxPower : int = 100;
 public var minPower : int = 1;
 public var powerIncrement : int = 10;
 
+public var powerBar : GameObject;
+
 var curPower : int = 0;
 var holdingSpace : boolean = false;
 var goingUp = true;
@@ -59,8 +61,16 @@ function Update () {
 		var rb : Rigidbody = newProjectile.GetComponent.<Rigidbody>();
 		rb.velocity = Camera.main.transform.forward * curPower * powerMultiplier;
 		holdingSpace = false;
-		
+		curPower=0;
 		
 	}
+	
+	
+	//update power bar based on curpower
+	var red : float = curPower/100F;
+	powerBar.GetComponent.<Image>().color = new Color(1, 1-red, 1-red, 1);
+	var myRect = powerBar.GetComponent.<RectTransform>();
+	myRect.sizeDelta = new Vector2(curPower*1.5, curPower*1.5);
+
 
 }
