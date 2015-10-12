@@ -1,8 +1,8 @@
 ﻿#pragma strict
 
 
-var textSpeed : float; //speed text moves up
-var yLimit : int = 100; //position where text gets destroyed
+var textSpeed : float = 1; //speed text moves up
+var yLimit : int = 10; //position where text gets destroyed
 
 function Start () {
 

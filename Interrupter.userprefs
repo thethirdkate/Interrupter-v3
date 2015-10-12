@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/hitScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Glass.shader">
     <Files>
       <File FileName="Assets/TextBlockScript.js" Line="1" Column="1" />
-      <File FileName="Assets/EnemyScript.js" Line="66" Column="60" />
-      <File FileName="Assets/hitScript.js" Line="8" Column="25" />
-      <File FileName="Assets/MouseLook.js" Line="23" Column="31" />
+      <File FileName="Assets/EnemyScript.js" Line="1" Column="1" />
+      <File FileName="Assets/hitScript.js" Line="1" Column="1" />
+      <File FileName="Assets/MouseLook.js" Line="1" Column="1" />
+      <File FileName="Assets/ProjectileShooter.js" Line="73" Column="59" />
+      <File FileName="Assets/Glass.shader" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

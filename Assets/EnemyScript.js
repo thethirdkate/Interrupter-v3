@@ -11,7 +11,10 @@ var spawnCounter : int = 0;
 var gapCount : int = 0;
 var blockCount : int = 0;
 
-var phrases : String[];
+/* OLD 
+var phrases : String[]; */
+
+var textAssets : GameObject[];
 
 function Start () {
 	//spawn a text block
@@ -58,13 +61,25 @@ function Update () {
 	}
 	spawnCounter++;
 }
-
+/* OLD
 function spawnText() {
 	var myText = Instantiate(textBlock, transform.position, Quaternion.identity); //create a new text block
 	//myText.GetComponent.<TextMesh>().text = "Yeah so my latest idea...";
 	var getTextNum = Random.Range(0,phrases.Length-1);
 	myText.GetComponent.<TextMesh>().text = phrases[getTextNum];
 	blockCount++;
+	gapCount=0;
+}
+*/
+function spawnText() {
+	var getTextNum = Random.Range(0,textAssets.Length-1);
+	var myText = Instantiate(textAssets[getTextNum], transform.position, Quaternion.identity); //create a new text block
+	//myText.GetComponent.<TextMesh>().text = "Yeah so my latest idea...";
+	//var getTextNum = Random.Range(0,phrases.Length-1);
+	//myText.GetComponent.<TextMesh>().text = phrases[getTextNum];
+	blockCount++;
+	myText.transform.rotation.y = 180;
+	myText.transform.position.x = -myText.transform.GetComponent.<Collider>().bounds.size.x/2;
 	gapCount=0;
 }
 

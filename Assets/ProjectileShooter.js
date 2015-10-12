@@ -70,7 +70,7 @@ function Update () {
 	var red : float = curPower/100F;
 	powerBar.GetComponent.<Image>().color = new Color(1, 1-red, 1-red, 1);
 	var myRect = powerBar.GetComponent.<RectTransform>();
-	myRect.sizeDelta = new Vector2(curPower*1.5, curPower*1.5);
+	myRect.sizeDelta = new Vector2(curPower*1.5+30, curPower*1.5+30);
 
 
 }
